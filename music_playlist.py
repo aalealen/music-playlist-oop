@@ -69,22 +69,3 @@ class Player:
         self.current_track_index -= 1
         if self.current_track_index < 0:
             self.current_track_index = len(self.current_playlist.tracks) - 1
-p = Playlist("Мой плейлист")
-p.add_track(Track("Bohemian Rhapsody", "Queen", 354))
-p.add_track(Track("Imagine", "John Lennon", 183))
-p.add_track(Track("We Will Rock You", "Queen", 122))
-
-player = Player()
-player.add_playlist(p)
-player.select_playlist("Мой плейлист")
-
-player.play()          # Bohemian Rhapsody — Queen (354 сек)
-player.next_track()
-player.play()          # Imagine — John Lennon (183 сек)
-player.next_track()
-player.play()          # We Will Rock You — Queen (122 сек)
-player.next_track()
-player.play()          # снова Bohemian Rhapsody — Queen (354 сек)
-player.prev_track()
-player.play()          # We Will Rock You — Queen (122 сек)
-
